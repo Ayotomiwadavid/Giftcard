@@ -1,6 +1,8 @@
 import React from 'react'
 import Productcard from './Productcard'
 import americanXp from '../Images/americanXp.jpg'
+import AppleCardImage from '../Images/AppleCard.jpeg'
+import AmazonCard from '../Images/amazoncard.png'
 
 const Productsection = () => {
     return (
@@ -11,15 +13,42 @@ const Productsection = () => {
                     <p class="font-light text-gray-500 lg:mb-16 sm:text-xl dark:text-gray-400">Explore the whole collection of open-source web components and elements built with the utility classes from Tailwind</p>
                 </div>
                 <div class="grid gap-5 mb-6 lg:mb-16 md:grid-cols-3 w-full place-items-center">
-                  <Productcard 
-                    productImage={americanXp}
-                    productPrice='50'
-                    productName=''
-                  />
-                  <Productcard />
-                  <Productcard />
-                  <Productcard />
-                  <Productcard />
+                    <Productcard
+                        productImage={AppleCardImage}
+                        productPrice='50'
+                        productName='Apple Gift Card'
+                        key='1'
+                    />
+                    <Productcard
+                        productImage={AmazonCard}
+                        productPrice='50'
+                        productName='Amazon Gift Card'
+                        key='2'
+                    />
+                    <Productcard
+                        productImage={americanXp}
+                        productPrice='50'
+                        productName='Amex Gift Card'
+                        key='3'
+                    />
+                    <Productcard
+                        productImage={americanXp}
+                        productPrice='50'
+                        productName='Ebay Gift Card'
+                        key='4'
+                    />
+                    <Productcard
+                        productImage={americanXp}
+                        productPrice='50'
+                        productName='Googleplay Gift Card'
+                        key='5'
+                    />
+                    <Productcard
+                        productImage={americanXp}
+                        productPrice='50'
+                        productName='MasterCard Gift Card'
+                        key='6'
+                    />
                 </div>
             </div>
         </section>
