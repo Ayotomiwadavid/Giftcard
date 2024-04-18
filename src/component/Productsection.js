@@ -1,8 +1,10 @@
 import React from 'react'
 import Productcard from './Productcard'
 import americanXp from '../Images/americanXp.jpg'
-import AppleCardImage from '../Images/AppleCard.jpeg'
-import AmazonCard from '../Images/amazoncard.png'
+import AppleCardImage from '../Images/AppleCard.jpg'
+import AmazonCard from '../Images/amazoncard.jpg'
+import EbayCard from '../Images/EbayCard.jpg'
+import GooglePlayCard from '../Images/Googleplaycard.jpg'
 
 const Productsection = () => {
     return (
@@ -32,13 +34,13 @@ const Productsection = () => {
                         key='3'
                     />
                     <Productcard
-                        productImage={americanXp}
+                        productImage={EbayCard}
                         productPrice='50'
                         productName='Ebay Gift Card'
                         key='4'
                     />
                     <Productcard
-                        productImage={americanXp}
+                        productImage={GooglePlayCard}
                         productPrice='50'
                         productName='Googleplay Gift Card'
                         key='5'
