@@ -3,9 +3,9 @@ import cardMarket from '../Images/cardMaket.jpg'
 
 const About = () => {
   return (
-    <section class="bg-transparent dark:bg-gray-900">
+    <section class="bg-transparent dark:bg-gray-900" id='about'>
     <div class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
-        <img class="w-full dark:hidden rounded-lg" src={cardMarket} alt="dashboard image" />
+        <img class="w-full dark:hidden rounded-lg" src={cardMarket} alt="dashboard img" />
         <div class="mt-4 md:mt-0">
             <h2 class="mb-6 text-lg font-bold text-[#1363DF] uppercase dark:text-white">About Us</h2>
             <h2 class="mb-4 md:text-4xl text-2xl w-full tracking-tight font-extrabold text-[#0B212F] dark:text-white">PURCHASE GIFT AND VALIDATE GIFT CARDS SWIFTLY WITHOUT PROBLEM.</h2>

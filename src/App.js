@@ -9,7 +9,7 @@ import Footer from './component/Footer'
 
 const App = () => {
   return (
-    <main className='bg-[#fff]'>
+    <main className='bg-[#fff]' id='top'>
      <Header />
      <Herosection />
      <About />

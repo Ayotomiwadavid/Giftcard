@@ -2,7 +2,7 @@ import React from 'react'
 
 const Contactsection = () => {
     return (
-        <section class="bg-[#e8f8ff] dark:bg-gray-900">
+        <section class="bg-[#e8f8ff] dark:bg-gray-900" id='verifyCard'>
             <div class="py-5 lg:py-16 md:px-4 px-2 mx-auto">
                 <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-[#0B212F] dark:text-white capitalize">Verify gift card</h2>
                 <p class="mb-5 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">Verify if your gift card is valid or not using our fast and secured gift card verification service.</p>
