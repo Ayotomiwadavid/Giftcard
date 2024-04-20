@@ -4,8 +4,7 @@ import Herosection from './component/Herosection'
 import About from './component/About'
 import Contactsection from './component/Contactsection'
 import Productsection from './component/Productsection'
-import Rating from './Rating'
-import Testimonial from './component/Testimonial'
+import Rating from './Newsletter'
 import Footer from './component/Footer'
 
 const App = () => {
@@ -16,7 +15,6 @@ const App = () => {
      <About />
      <Contactsection />
      <Productsection />
-     <Testimonial />
      <Rating />
      <Footer />
     </main>

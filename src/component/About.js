@@ -8,7 +8,7 @@ const About = () => {
         <img class="w-full dark:hidden rounded-lg" src={cardMarket} alt="dashboard image" />
         <div class="mt-4 md:mt-0">
             <h2 class="mb-6 text-lg font-bold text-[#1363DF] uppercase dark:text-white">About Us</h2>
-            <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-[#0B212F] dark:text-white">PURCHASE GIFT AND VALIDATE GIFT CARDS SWIFTLY WITHOUT PROBLEM.</h2>
+            <h2 class="mb-4 md:text-4xl text-2xl w-full tracking-tight font-extrabold text-[#0B212F] dark:text-white">PURCHASE GIFT AND VALIDATE GIFT CARDS SWIFTLY WITHOUT PROBLEM.</h2>
             <p class="mb-6 font-light text-gray-500 md:text-lg dark:text-gray-400">Flowbite helps you connect with friends and communities of people who share your interests. Connecting with your friends and family as well as discovering new ones is easy with features like Groups.</p>
             <a href="#" class="inline-flex items-center text-[#1363DF] bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:focus:ring-primary-900">
                 Get started
