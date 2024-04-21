@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Header from './component/Header'
+// import Header from './component/Header'
 import Herosection from './component/Herosection'
 import About from './component/About'
 import Contactsection from './component/Contactsection'
@@ -7,6 +7,7 @@ import Productsection from './component/Productsection'
 import Rating from './Newsletter'
 import Footer from './component/Footer'
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
+import AppNavbar from './component/Navbar'
 
 const App = () => {
   let [controllerVisibility, setControllerVisibility] = useState(false)
@@ -32,7 +33,7 @@ const App = () => {
           <ArrowUpwardIcon style={{ fontSize: '30', color: '#1363DF' }} />
         </div>
       </aside>
-      <Header />
+      <AppNavbar />
       <Herosection />
       <About />
       <Contactsection />
