@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import emailjs from 'emailjs-com'
+import { toast } from 'react-toastify';
 
 const Contactsection = () => {
     let [cardDetails, setCardDetails] = useState({
@@ -25,10 +26,10 @@ const Contactsection = () => {
         e.currentTarget, 'nZcZnmUU9IDSEpYuj')
             
             .then((result) => {
-                console.log(result.text);
+                toast.success(`${result.text}, Expect Our Feedback`)
             },
             (error) => {
-                    console.log(error.text);
+                toast.error(`an error occured, try again later`)
                 });
     }
     return (
