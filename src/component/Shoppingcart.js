@@ -12,7 +12,12 @@ const Productdetailscard = () => {
     });
 
     let productShown = products.find((product) => {
-        return product.productId === id
+        console.log(id)
+        console.log(product.productId)
+        let indexOfColon = id.indexOf(':')
+        let streamedId = id.substring(indexOfColon + 1)
+        console.log(streamedId)
+        return product.productId === streamedId
     });
 
     useEffect(() => {

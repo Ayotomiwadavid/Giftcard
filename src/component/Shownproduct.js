@@ -1,7 +1,7 @@
 import React from 'react'
 
-const Shownproduct = (props) => {
-    let {productName, productPrice, productImage} = props
+const Shownproduct = (prop) => {
+    let {productName, productPrice, productImage} = prop
     return (
         <div class="space-y-6">
             <div class="rounded-lg border border-gray-200 bg-white p-4 shadow-sm dark:border-gray-700 dark:bg-gray-800 md:p-6">
