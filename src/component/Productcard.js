@@ -1,8 +1,9 @@
 import React from 'react'
 import { Card } from "flowbite-react";
+import { Link } from 'react-router-dom';
 
 const Productcard = (props) => {
-    let {productImage, productPrice, productName} = props
+    let {productImage, productPrice, productName, productId} = props
     return (
         <Card
             className="w-[300px] max-w-sm"
@@ -61,12 +62,12 @@ const Productcard = (props) => {
             </div>
             <div className="flex items-center justify-between">
                 <span className="text-3xl font-bold text-gray-900 dark:text-white">${productPrice}</span>
-                <a
-                    href="#top"
+                <Link
+                    to={`/product/:${productId}`}
                     className="rounded-lg bg-[#1363DF] px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-cyan-800 focus:outline-none focus:ring-4 focus:ring-cyan-300 dark:bg-cyan-600 dark:hover:bg-cyan-700 dark:focus:ring-cyan-800"
                 >
                     Add to cart
-                </a>
+                </Link>
             </div>
         </Card>
     )

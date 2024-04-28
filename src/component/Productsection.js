@@ -18,6 +18,7 @@ const Productsection = () => {
                                 productPrice={product.productPrice}
                                 productName={product.productName}
                                 key={product.productId}
+                                productId={product.productId}
                             />
                         })
                     }

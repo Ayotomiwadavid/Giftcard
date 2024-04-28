@@ -37,14 +37,9 @@ const Ordersummary = () => {
                         </dl>
                     </div>
 
-                    <a href="#" class="flex w-full items-center justify-center rounded-lg bg-primary-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Proceed to Checkout</a>
-
-                    <div class="flex items-center justify-center w-full p-3">
-                        <Button  class="flex items-center justify-center gap-2 text-sm font-medium rounded-md bg-[#1363DF] p-[10px] text-white  dark:text-primary-500">
-                            Continue Shopping
-                            <svg class="h-5 w-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5m14 0-4 4m4-4-4-4" />
-                            </svg>
+                    <div class="flex items-center justify-center w-full p-2">
+                        <Button  class="flex w-full h-[45px] items-center justify-between  text-sm font-medium rounded-md bg-[#1363DF] p-[10px] text-white  dark:text-primary-500">
+                        Proceed to Checkout
                         </Button>
                     </div>
                 </div>
