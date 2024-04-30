@@ -1,7 +1,18 @@
 import { Button } from 'flowbite-react'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom'
+import { products } from '../Productjson/product'
+import { handleIncrement, handleDecrement } from '../Controller'
 
 const Ordersummary = () => {
+    let {id} = useParams();
+    let [productPrice, setProductPrice] = useState('')
+    let indexOfColon = id.indexOf(':')
+    let streamedId = id.substring(indexOfColon + 1)
+    let realProduct = products.find((product) => product.id = streamedId)
+    useEffect(()=>{
+        setProductPrice(realProduct.productPrice);
+    }, []);
     return (
         <div>
             <div class="mx-auto mt-6 max-w-4xl flex-1 space-y-6 lg:mt-0 lg:w-full">
@@ -12,28 +23,18 @@ const Ordersummary = () => {
                         <div class="space-y-2">
                             <dl class="flex items-center justify-between gap-4">
                                 <dt class="text-base font-normal text-gray-500 dark:text-gray-400">Original price</dt>
-                                <dd class="text-base font-medium text-gray-900 dark:text-white">$7,592.00</dd>
+                                <dd class="text-base font-medium text-gray-900 dark:text-white">${productPrice}.00</dd>
                             </dl>
 
                             <dl class="flex items-center justify-between gap-4">
                                 <dt class="text-base font-normal text-gray-500 dark:text-gray-400">Savings</dt>
-                                <dd class="text-base font-medium text-green-600">-$299.00</dd>
-                            </dl>
-
-                            <dl class="flex items-center justify-between gap-4">
-                                <dt class="text-base font-normal text-gray-500 dark:text-gray-400">Store Pickup</dt>
-                                <dd class="text-base font-medium text-gray-900 dark:text-white">$99</dd>
-                            </dl>
-
-                            <dl class="flex items-center justify-between gap-4">
-                                <dt class="text-base font-normal text-gray-500 dark:text-gray-400">Tax</dt>
-                                <dd class="text-base font-medium text-gray-900 dark:text-white">$799</dd>
+                                <dd class="text-base font-medium text-green-600">-$5.00</dd>
                             </dl>
                         </div>
 
                         <dl class="flex items-center justify-between gap-4 border-t border-gray-200 pt-2 dark:border-gray-700">
                             <dt class="text-base font-bold text-gray-900 dark:text-white">Total</dt>
-                            <dd class="text-base font-bold text-gray-900 dark:text-white">$8,191.00</dd>
+                            <dd class="text-base font-bold text-gray-900 dark:text-white">${productPrice - 5}.00</dd>
                         </dl>
                     </div>
 
