@@ -4,8 +4,8 @@ import { useParams } from 'react-router-dom'
 import { products } from '../Productjson/product'
 import { handleVisilityState } from '../Controller'
 
-const Ordersummary = () => {
-    let [popVisibility, setPopUpvisibility] = useState(false)
+const Ordersummary = (props) => {
+    let {componentUseState, componentUsestateCaller} = props
     let {id} = useParams();
     let [productPrice, setProductPrice] = useState('')
     let indexOfColon = id.indexOf(':')
@@ -15,7 +15,7 @@ const Ordersummary = () => {
         setProductPrice(realProduct.productPrice);
     }, []);
     const VisilityStateHandlerCaller = () =>{
-        handleVisilityState(setPopUpvisibility)
+        handleVisilityState(componentUsestateCaller)
     }
     return (
         <div>
