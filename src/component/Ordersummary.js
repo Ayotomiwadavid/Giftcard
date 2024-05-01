@@ -2,9 +2,10 @@ import { Button } from 'flowbite-react'
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { products } from '../Productjson/product'
-import { handleIncrement, handleDecrement } from '../Controller'
+import { handleVisilityState } from '../Controller'
 
 const Ordersummary = () => {
+    let [popVisibility, setPopUpvisibility] = useState(false)
     let {id} = useParams();
     let [productPrice, setProductPrice] = useState('')
     let indexOfColon = id.indexOf(':')
@@ -13,6 +14,9 @@ const Ordersummary = () => {
     useEffect(()=>{
         setProductPrice(realProduct.productPrice);
     }, []);
+    const VisilityStateHandlerCaller = () =>{
+        handleVisilityState(setPopUpvisibility)
+    }
     return (
         <div>
             <div class="mx-auto mt-6 max-w-4xl flex-1 space-y-6 lg:mt-0 lg:w-full">
@@ -39,7 +43,7 @@ const Ordersummary = () => {
                     </div>
 
                     <div class="flex items-center justify-center w-full p-2">
-                        <Button  class="flex w-full h-[45px] items-center justify-between  text-sm font-medium rounded-md bg-[#1363DF] p-[10px] text-white  dark:text-primary-500">
+                        <Button onClick={VisilityStateHandlerCaller}  class="flex w-full h-[45px] items-center justify-between  text-sm font-medium rounded-md bg-[#1363DF] p-[10px] text-white  dark:text-primary-500">
                         Proceed to Checkout
                         </Button>
                     </div>

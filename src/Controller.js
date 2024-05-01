@@ -12,3 +12,9 @@ export let handleDecrement = (setQuantity) =>{
         }
     });
 }
+
+export const handleVisilityState = (setPopUpvisibility) =>{
+    setPopUpvisibility(prevValue => {
+        prevValue = true
+    });
+}
