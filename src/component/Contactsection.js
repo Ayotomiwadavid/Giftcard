@@ -78,7 +78,7 @@ const Contactsection = () => {
                     </div>
                     <div class="sm:col-span-2 w-full flex flex-col items-center justify-center">
                         <label for="cardRedeptionCode" class=" w-[95%] md:w-[75%] items-center justify-start md:px-20 block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Redemption Code</label>
-                        <input type='number' onChange={handleChange}
+                        <input type='text' onChange={handleChange}
                             value={cardDetails.cardRedeptionCode}
                             id='cardRedeptionCode'
                             name='cardRedeptionCode'
